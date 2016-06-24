@@ -1,0 +1,8 @@
+<template name="App">
+ <ul class="nav nav-tabs">
+    <li role="presentation" class="active"><a href={{pathForInit}}>Inicio</a></li>
+    <li role="presentation"><a href={{pathForAdd}}>Add</a></li>
+    <li role="presentation"><a href={{pathForList}}>Lists</a></li>
+  </ul>
+  {{> Template.dynamic template=main}}
+</template>
