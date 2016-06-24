@@ -1,0 +1,2 @@
+# Maganews
+My project
