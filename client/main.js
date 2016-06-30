@@ -3,19 +3,27 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 //import './main.html';
 import '../startup/client/router.js';
-import '../ui/layout/home.html';
+import '../ui/pages/home.html';
+import '../ui/pages/index.html';
+import '../startup/client/accounts-config.js';
 
 Template.App.helpers({
-  pathForInit: function(){
+  pathForHome: function(){
   	var path = FlowRouter.path("Home") ;
   	return path;
   },
-  pathForAdd: function(){
-  	var path = FlowRouter.path("Agregar") ;
+  pathForStore: function(){
+  	var path = FlowRouter.path("Store") ;
   	return path;
   },
-  pathForList: function(){
-  	var path = FlowRouter.path("Lista") ;
+  pathForRegist: function(){
+  	var path = FlowRouter.path("Regist") ;
   	return path;
+  }
+});
+
+Template.App.events({
+  "click #event": function(event, template){
+
   }
 });

@@ -8,15 +8,15 @@ FlowRouter.route('/', {
 });
 
 FlowRouter.route('/add', {
-    name: 'Agregar',
+    name: 'Store',
     action: function() {
-        BlazeLayout.render('App', { main: 'Agregar' });
+        BlazeLayout.render('App', { main: 'Store' });
     }
 });
 
 FlowRouter.route('/lists', {
-    name: 'Lista',
+    name: 'Regist',
     action: function() {
-        BlazeLayout.render('App', { main: 'Lista' });
+        BlazeLayout.render('App', { main: 'Regist' });
     }
 });

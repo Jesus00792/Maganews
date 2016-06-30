@@ -1,12 +1,16 @@
-<template name="Agregar">
+<template name="Login">
   <div class="container">
-    <h2>Ingresar datos</h2>
-     <form class="add-js">
-       <input type="text" placeholder="Id" name="_id"><br>
-       <input type="text" placeholder="Nombre" name="nom"><br>
-       <input type="text" placeholder="Apellido" name="ape"><br>
-       <input type="text" placeholder="Cedula" name="ced"><br>
-       <input type="submit" value="Registrar" />
-    </form>
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+        <form method="post" action="">
+          <input type="text" name="nombre" placeholder="Nombre"><br>
+          <input type="text" name="empresa" placeholder="Empresa"><br>
+          <input type="text" name="correo" placeholder="Correo"><br>
+          <input type="text" name="telefono" placeholder="Telefono"><br>
+          <input type="text" name="tarjeta" placeholder="Tarjeta de credito"><br>
+          <input type="submit" value="Enviar">
+        </form>
+      </div>
+    </div>
   </div>
 </template>
