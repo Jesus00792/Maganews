@@ -27,3 +27,6 @@ aldeed:simple-schema
 accounts-password
 accounts-ui
 mrt:jquery-ui
+cfs:standard-packages
+cfs:gridfs
+ian:accounts-ui-bootstrap-3
