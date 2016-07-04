@@ -1,4 +1,7 @@
 <template name="App">
+  <head>
+    <title>Maganews</title>
+  </head>
 
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container ">
@@ -21,9 +24,9 @@
                   <li>
                       <a href="{{pathForRegist}}">Registro</a>
                   </li>
-                  <li>
-                      <a href="#">{{> loginButtons}}</a>
-                  </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                {{> loginButtons}}
               </ul>
           </div>
           <!-- /.navbar-collapse -->

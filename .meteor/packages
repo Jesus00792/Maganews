@@ -23,9 +23,10 @@ kadira:flow-router
 kadira:blaze-layout
 arillo:flow-router-helpers
 aldeed:simple-schema
+aldeed:collection2
+accounts-base
 accounts-password
-accounts-ui
+ian:accounts-ui-bootstrap-3
 mrt:jquery-ui
 cfs:standard-packages
 cfs:gridfs
-ian:accounts-ui-bootstrap-3

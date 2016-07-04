@@ -1,11 +1,11 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-//import './main.html';
-import '../startup/client/router.js';
-import '../ui/pages/home.html';
-import '../ui/pages/index.html';
-import '../startup/client/accounts-config.js';
+import './main.html';
+import '../imports/router/router.js';
+import '../imports/ui/pages/home.html';
+import '../imports/ui/pages/index.html';
+import '../imports/startup/accounts-config.js';
 
 Template.App.helpers({
   pathForHome: function(){
