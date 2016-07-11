@@ -66,12 +66,12 @@ export default UsrData;
   Publishing data
 ******************/
 
-/*if (Meteor.isServer) {
+if (Meteor.isServer) {
   // This code only runs on the server
   // Only publish tasks that are public or belong to the current user
 
   Meteor.Meteor.methods({
-    'UserInsert_reg':function(id, nom, ape, email, nkname, pswrd, tipo){
+    'UserInsert':function(id, nom, ape, email, nkname, pswrd, tipo){
        UsrData.insert({
          _id:id,
          f_name:nom,
@@ -82,23 +82,18 @@ export default UsrData;
          usr_type:tipo
        });
      },
-     'UserInsert_adm':function(id, nom, ape, email, nkname, pswrd,tipo, compania, web, direccion){
-       UsrData.insert({
-         _id:id,
-         f_name:nom,
-         l_name:ape,
-         correo: email,
-         nk_name:nkname,
-         pssword:pswrd,
-         companyName:compania,
-         address:direccion,
-         website:web,
-         usr_type:tipo
-       });
-     }
+     'UserDelete':function(id){
+        UsrData.delete({_id:id});
+      },
+      'UserUpdate':function(id, newId, nom, ape, email, nkname, pswrd, tipo){
+         UsrData.update({_id : id},{$set:{_id:newId,f_name:nom,l_name:ape,correo: email,nk_name:nkname,  pssword:pswrd,usr_type:tipo}});
+       },
+       'UserSelect':function(id){
+          return UsrData.find({_id : id});
+        }
   });
 }
-/*Meteor.publish('items', function itemsPublication() {
+Meteor.publish('Usuario', function itemsPublication() {
     return Items.find({
       $or: [
         { private: { $ne: true } },
@@ -106,4 +101,4 @@ export default UsrData;
       ],
     });
   });
-}*/
+}
