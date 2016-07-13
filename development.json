@@ -1,0 +1,8 @@
+{
+  "public": {
+    "stripe": "pk_test_z39XihEUxZASUJ6D0XM2moB2"
+  },
+  "private": {
+    "stripe": "sk_test_FC4HXagJOlyCW9fgQJlfDRjA"
+  }
+}

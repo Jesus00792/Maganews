@@ -30,3 +30,7 @@ ian:accounts-ui-bootstrap-3
 mrt:jquery-ui
 cfs:standard-packages
 cfs:gridfs
+spacebars
+mrgalaxy:stripe
+check
+audit-argument-checks

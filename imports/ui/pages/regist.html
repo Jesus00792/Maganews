@@ -1,8 +1,151 @@
 <template name="Regist">
   <div class="container">
-    <div class="spacer"></div>
-    <div class="col-xs-12">
-      <h1>ESTA ES EL REGISTRO</h1>
+    <div class="row">
+      <button class="col-lg-6 col-sm-6 col-md-6 col-xs-6 btn btn-primary btn-padding-rgt userreg"><h1>Lectores</h1></button>
+      <button class="col-lg-6 col-sm-6 col-md-6 col-xs-6 btn btn-warning btn-padding-rgt userseller"><h1>Empresarios</h1></button>
     </div>
-  </div>
+    {{#if userreg}}
+    <div class="col-lg-12 form-padding">
+      <form class="add-lector" method="post">
+        <div class="row">
+          <div class="panel panel-default">
+            <div class="panel-heading"><h1>Formualio</h1></div>
+              <div class="panel-body">
+                <div class="col-lg-6 center-block">
+                  <div class="panel panel-default">
+                    <div class="panel-heading"><h3>Información General</h3></div>
+                      <div class="panel-body">
+                        <input class="form-control form-padding" type="text" name="nom1" placeholder="Nombre*"/>
+                        <input class="form-control form-padding" type="text" name="ape1" placeholder="Apellido*"/>
+                        <input class="form-control form-padding" type="number" name="ed1" placeholder="Edad*"/>
+                        <input class="form-control form-padding" type="text" name="cor1" placeholder="Correo*"/>
+                        <input class="form-control form-padding" type="text" name="visa1" placeholder="Tarjeta de credito (Opcional)"/>
+                        <input class="form-control form-padding" type="text" name="nick1" placeholder="Nombre de Usuario"/>
+                        <input class="form-control form-padding" type="password" name="pssw11" placeholder="Contraseña"/>
+                        <input class="form-control form-padding" type="password" name="pssw21" placeholder="Contraseña (repetir)"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 center-block">
+                    <div class="row">
+                      <div class="panel panel-default form-padding">
+                        <div class="panel-heading"><h3>Tendecias</h3></div>
+                          <div class="panel-body">
+                            <div class="col-lg-6">
+                              <label><input type="checkbox" name="check1" value="0">Deportivas</label><br>
+                              <label><input type="checkbox" name="check2" value="1">Entretenimiento</label><br>
+                              <label><input type="checkbox" name="check3" value="2">Farandula</label>
+                            </div>
+                            <div class="col-lg-6">
+                                <label><input type="checkbox" name="check4" value="3">Nacionales</label><br>
+                                <label><input type="checkbox" name="check5" value="4">Politca</label><br>
+                                <label><input type="checkbox" name="check6" value="5">Salud</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12"><input class="btn btn-success" type="submit" value="Registrar"/></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          {{/if}}
+          {{#if userseller}}
+          <div class="col-lg-12 form-padding">
+            <form class="add-seller" method="post">
+              <div class="row">
+                <div class="panel panel-default">
+                  <div class="panel-heading"><h1>Formualio</h1></div>
+                    <div class="panel-body">
+                      <div class="col-lg-6 center-block">
+                        <div class="panel panel-default form-padding">
+                          <div class="panel-heading"><h3>Información General</h3></div>
+                          <div class="panel-body">
+                            <input class="form-control form-padding" type="text" name="nom2" placeholder="Nombre*"/>
+                            <input class="form-control form-padding" type="text" name="ape2" placeholder="Apellido*"/>
+                            <input class="form-control form-padding" type="text" name="ed2" placeholder="Edad*"/>
+                            <input class="form-control form-padding" type="text" name="cor2" placeholder="Correo*"/>
+                            <input class="form-control form-padding" type="text" name="visa2" placeholder="Tarjeta de credito*"/>
+                            <input class="form-control form-padding" type="text" name="nick2" placeholder="Nombre de Usuario*"/>
+                            <input class="form-control form-padding" type="password" name="pssw12" placeholder="Contraseña*"/>
+                            <input class="form-control form-padding" type="password" name="pssw22" placeholder="Contraseña (repetir)*"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 center-block">
+                        <div class="row">
+                          <div class="panel panel-default form-padding">
+                            <div class="panel-heading"><h3>Datos de negocio</h3></div>
+                            <div class="panel-body">
+                              <div class="col-lg-6">
+                                <input class="form-control form-padding" type="text" name="company2" placeholder="Compañia"/>
+                                <input class="form-control form-padding" type="text" name="address2" placeholder="Direccion"/>
+                                <input class="form-control form-padding" type="text" name="web2" placeholder="Website (Opcional)"/>
+                                <input class="form-control form-padding" type="text" name="fk2" placeholder="Facebook (Opcional)"/>
+                                <input class="form-control form-padding" type="text" name="twt2" placeholder="Twitter (Opcional)"/>
+                                <input class="form-control form-padding" type="text" name="instgm2" placeholder="Instagram (Opcional)"/>
+                              </div>
+                            </div>
+                            <div class="panel-heading"><h3>Documentos a vender</h3></div>
+                            <div class="panel-body">
+                              <div class="col-lg-12">
+                                <label><input type="checkbox" value="0">Periodicos</label>
+                                <label><input type="checkbox" value="1">Revistas</label>
+                                <label><input type="checkbox" value="2">Libros</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="panel panel-default form-padding">
+                        <div class="panel-heading"><h3>Licencias de uso</h3></div>
+                        <div class="panel-body">
+                          <div class="col-lg-12">
+                            <div class="col-sm-6 col-md-4">
+                              <div class="thumbnail">
+                                <img src="http://dummyimage.com/320x320/8f8f8f/c6c7d1.png" alt="...">
+                                <div class="caption">
+                                  <h3>Licencia #1</h3>
+                                  <p>Paquete Basico</p>
+                                  <p><input data-service="1" class="btn btn-success" type="submit" value="Comprar y Registrar"/></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                              <div class="thumbnail">
+                                <img src="http://dummyimage.com/320x320/8f8f8f/c6c7d1.png" alt="...">
+                                <div class="caption">
+                                  <h3>Licencia #2</h3>
+                                  <p>Paquete Intermedio</p>
+                                  <p><input data-service="2" class="btn btn-success" type="submit" value="Comprar y Registrar"/></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                              <div class="thumbnail">
+                                <img src="http://dummyimage.com/320x320/8f8f8f/c6c7d1.png" alt="...">
+                                <div class="caption">
+                                  <h3>Licencia #3</h3>
+                                  <p>Paquete Empresarial</p>
+                                  <p><input data-service="3" class="btn btn-success" type="submit" value="Comprar y Registrar"/></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          {{/if}}
+          {{#unless proccess}}
+            <div class="alert alert-success" role="alert">compra exitosa</div>
+          {{/unless}}
+        </div>
 </template>

@@ -2,9 +2,10 @@ import { Accounts } from 'meteor/accounts-base';
 
 Accounts.ui.config({
   requestPermissions: {},
-    extraSignupFields: [{
+  passwordSignupFields: 'USERNAME_ONLY'
+    /*extraSignupFields: [{
         fieldName: 'username',
-        fieldLabel: 'usuario',
+        fieldLabel: 'nombre',
         inputType: 'text',
         visible: true,
         validate: function(value, errorFunction) {
@@ -19,8 +20,8 @@ Accounts.ui.config({
     { fieldName: 'password', fieldLabel: 'contraseña', inputType: 'text',
     visible: true, /*validate: function(value, errorFunction) { if (!value) {
     errorFunction("Introduzca su contraseña"); return false; } else { return
-    true; } }*/
-    }]
+    true; } }
+    }]*/
 });
 
 accountsUIBootstrap3.setLanguage('es');

@@ -17,17 +17,49 @@
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            {{#if currentUser}}
               <ul class="nav navbar-nav">
                   <li>
                       <a href="{{pathForStore}}">Tienda</a>
                   </li>
+                {{#if IsAdmin}}
                   <li>
-                      <a href="{{pathForRegist}}">Registro</a>
+                      <a href="{{pathForStore}}">Subir archivo</a>
                   </li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                {{> loginButtons}}
-              </ul>
+                  <li>
+                      <a href="{{pathForStore}}">Perfil</a>
+                  </li>
+                  <li>
+                      <a href="{{pathForStore}}">Salir</a>
+                  </li>
+                {{/if}}
+                {{#if IsReg}}
+                  <li>
+                      <a href="{{pathForStore}}">Perfil</a>
+                  </li>
+                  <li>
+                      <a href="{{pathForStore}}">Salir</a>
+                  </li>
+                {{/if}}
+                </ul>
+          {{else}}
+                <form class="new-task">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li>
+                      <input class="form-control form-padding" type="text" name="user" placeholder="usuario" />
+                    </li>
+                    <li>
+                      <input class="form-control form-padding" type="password" name="pass" placeholder="contraseña" />
+                    </li>
+                    <li>
+                      <input class="btn btn-success form-padding" type="submit" value="Entrar"/>
+                    </li>
+                    <li>
+                      <input id="rgt" class="btn btn-primary form-padding" type="button" value="Registrarse"/>
+                    </li>
+                  </ul>
+                </form>
+          {{/if}}
           </div>
           <!-- /.navbar-collapse -->
       </div>

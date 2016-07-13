@@ -1,19 +1,63 @@
 /* CSS declarations go here */
 .spacer
 {
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
-.bk-img
+.bk-img { background-image: url("white-pattern.jpg"); background-repeat: repeat;
+width: 2000px; height: 1000px; position: fixed; }
+
+.center-text
 {
-  background-image: url("white-pattern.jpg");
-  background-repeat: repeat;
-  width: 2000px;
-  height: 1000px;
-  position: fixed;
- -webkit-filter: brightness(1.1);
- -moz-filter: brightness(1.1);
- -o-filter: brightness(1.1);
- -ms-filter: brightness(1.1);
- filter: brightness(1.1);
+  text-align: center;
+  padding: 10px;
+}
+
+.bk-footer
+{
+  background-color: rgb(255, 255, 255);
+}
+
+.panel-1
+{
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 700px;
+}
+
+.txt-size
+{
+  font-size: 24px;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+.sx-spacer
+{
+  margin-bottom: 20px;
+}
+
+.form-padding
+{
+  margin: 10px;
+}
+
+.btn-padding-rgt
+{
+  margin-top: 100px;
+}
+
+.rg-margin-1
+{
+  margin: : 50px;
+}
+
+.rg-margin-2
+{
+  margin: 100px;
+}
+
+.rg-margin-3
+{
+  margin: 150px;
 }

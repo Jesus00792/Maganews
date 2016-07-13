@@ -7,16 +7,23 @@ FlowRouter.route('/', {
     }
 });
 
-FlowRouter.route('/add', {
+FlowRouter.route('/store', {
     name: 'Store',
     action: function() {
         BlazeLayout.render('App', { main: 'Store' });
     }
 });
 
-FlowRouter.route('/lists', {
+FlowRouter.route('/regist', {
     name: 'Regist',
     action: function() {
         BlazeLayout.render('App', { main: 'Regist' });
+    }
+});
+
+FlowRouter.route('/upload', {
+    name: 'Uploader',
+    action: function() {
+        BlazeLayout.render('App', { main: 'Uploader' });
     }
 });
