@@ -1,10 +1,15 @@
-<template name="upload">
+<template name="Uploader">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <form>
-          <input type="file" />
+        <h1>SUBA LA FOTO AQUI</h1>
+        <form class="forma" method="post">
+          Subir foto:<input type="file" class="img" name="datafile"/><br>
         </form>
+        {{#each image_gallery}}
+          {{name}}<br>
+            <img src="{{this.url store='images'}}" width="300" height="300" alt="123456" /><br>
+        {{/each}}
       </div>
     </div>
   </div>

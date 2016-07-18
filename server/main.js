@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import UsrData from '../imports/api/us_data.js'
+import '../imports/api/img_data.js'
 Meteor.startup(() => {
   // code to run on server at startup
 });
@@ -89,4 +90,8 @@ Meteor.methods({
 
 Meteor.publish("Doc_Data", function(){
   return DocData.find();
+});
+
+Meteor.publish('images', function () {
+        return Photo.find();
 });

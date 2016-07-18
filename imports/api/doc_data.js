@@ -7,7 +7,7 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
   Estructura de 'Usuarios'
 ******************/
 
-var DocStore = new FS.Collection("docs_", {
+/*var DocStore = new FS.Collection("docs_", {
     stores: [new FS.Store.FileSystem("docs_", {path: "~/workspace/uploads/"})]
 });
 
@@ -60,4 +60,4 @@ DocSchema =new SimpleSchema({
   },
 });
 DocData.attachSchema( DocSchema );
-export default Items;
+export default Items;*/

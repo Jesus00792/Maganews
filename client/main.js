@@ -2,15 +2,16 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import './main.html';
 import '../imports/router/router.js';
 import '../imports/ui/pages/home.html';
 import '../imports/ui/pages/index.html';
 import '../imports/ui/pages/regist.html';
 import '../imports/ui/pages/store.html';
+import '../imports/ui/pages/sellUpload.html';
 import '../imports/startup/accounts-config.js';
 import '../imports/api/doc_data.js';
 import '../imports/api/us_data.js';
+import '../imports/api/img_data.js';
 
 var nom_sell;
 var ape_sell;
@@ -67,7 +68,7 @@ Template.App.helpers({
 
 Template.App.events({
   "click #rgt": function(event, instance){
-     FlowRouter.go('Regist');
+     FlowRouter.go('/Regist');
   },
   "submit .new-task": function(event,instance){
     let tar = event.target;
@@ -92,7 +93,7 @@ Template.Regist.onCreated(function RegistOnCreated(){
 
   template.checkout = StripeCheckout.configure({
     key: Meteor.settings.public.stripe,
-    image: 'http://dummyimage.com/320x320/8f8f8f/c6c7d1.png',
+    image: 'pago.png',
     locale: 'auto',
     token(token){
       let service = template.selectedService.get(),
@@ -240,23 +241,30 @@ Template.Regist.events({
 });
 
 
-Template.Store.helpers({
-  create: function(){
+Template.Uploader.onCreated(function UploaderOnCreated(){
+  Meteor.subscribe('images');
+});
 
-  },
-  rendered: function(){
 
-  },
-  destroyed: function(){
+Template.Uploader.helpers({
 
-  },
-  Data_Doc(){
-    return DocData.find();
+  'image_gallery': function(){
+    return Photo.find();
   }
 });
 
-Template.Store.events({
-  "click #foo": function(event, template){
-
+Template.Uploader.events({
+  'change .img': function(event){
+    let file = event.target.datafile;
+    FS.Utility.eachFile(event, function(file) {
+      Photo.insert(file, function (err, fileObj) {
+        if(err){
+          console.log(err);
+        }
+        else {
+          alert("Success!!!");
+        }
+      });
+    });
   }
 });

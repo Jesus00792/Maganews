@@ -17,13 +17,11 @@
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            {{#if currentUser}}
               <ul class="nav navbar-nav">
-                  <li>
-                      <a href="{{pathForStore}}">Tienda</a>
+                   <li>
+                      <a href="{{pathForUpload}}">subir foto</a>
                   </li>
-                {{#if IsAdmin}}
-                  <li>
+                  <!--<li>
                       <a href="{{pathForStore}}">Subir archivo</a>
                   </li>
                   <li>
@@ -32,17 +30,13 @@
                   <li>
                       <a href="{{pathForStore}}">Salir</a>
                   </li>
-                {{/if}}
-                {{#if IsReg}}
                   <li>
                       <a href="{{pathForStore}}">Perfil</a>
                   </li>
                   <li>
                       <a href="{{pathForStore}}">Salir</a>
-                  </li>
-                {{/if}}
+                  </li>-->
                 </ul>
-          {{else}}
                 <form class="new-task">
                   <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -59,7 +53,6 @@
                     </li>
                   </ul>
                 </form>
-          {{/if}}
           </div>
           <!-- /.navbar-collapse -->
       </div>
